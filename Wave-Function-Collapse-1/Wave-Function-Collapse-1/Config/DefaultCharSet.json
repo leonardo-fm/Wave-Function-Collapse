@@ -1,0 +1,14 @@
+﻿{
+  "CharsSet": [],
+  "CharsRule": [
+    {
+      "CurrentTile": "X",
+      "Left": [],
+      "Right": [],
+      "Up": [],
+      "Down": []
+    }
+  ],
+  "ShowSteps": false,
+  "StepsSpeed": 100
+}
