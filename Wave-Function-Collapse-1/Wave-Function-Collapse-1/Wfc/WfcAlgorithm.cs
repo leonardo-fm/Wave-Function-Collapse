@@ -149,8 +149,6 @@ public class WfcAlgorithm
         public char[] Right { get; set; }
         public char[] Up { get; set; }
         public char[] Down { get; set; }
-        public Direction[] Boundary { get; set; }
-        public char[] BoundaryCharsSet { get; set; }
 
         public char[] GetAvailableTails(Direction direction)
         {
