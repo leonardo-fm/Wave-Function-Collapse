@@ -86,6 +86,6 @@
       "Down": ["┐", "┬", "─", "┌", " "]
     }
   ],
-  "ShowSteps": false,
-  "StepsSpeed": 100
+  "ShowSteps": true,
+  "StepsSpeed": 25
 }
