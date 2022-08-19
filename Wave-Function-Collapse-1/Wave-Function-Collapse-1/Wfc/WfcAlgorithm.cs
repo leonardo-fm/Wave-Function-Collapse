@@ -59,20 +59,23 @@ public class WfcAlgorithm
     private (int x, int y) GetTile(char[,][] grid)
     {
         var minFitTiles = int.MaxValue;
-        var response = (-1, -1);
-        
+        var lowerTiles = new List<(int, int)>{(-1, -1)};
+
         for (var x = 0; x < grid.GetLength(0); x++)
         {
             for (var y = 0; y < grid.GetLength(1); y++)
             {
-                if(grid[x, y].Length >= minFitTiles || grid[x, y].Length <= 1) continue;
-
+                if(grid[x, y].Length > minFitTiles || grid[x, y].Length <= 1) continue;
+                
+                if(grid[x, y].Length < minFitTiles)
+                    lowerTiles.Clear();
+                
                 minFitTiles = grid[x, y].Length;
-                response = (x, y);
+                lowerTiles.Add((x, y));
             }
         }
 
-        return response;
+        return lowerTiles[_randomObject.Next(lowerTiles.Count)];
     }
     private void SetTile((int x, int y) tile, ref char[,][] grid)
     {

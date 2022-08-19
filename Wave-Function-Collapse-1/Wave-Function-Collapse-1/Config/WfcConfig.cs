@@ -13,7 +13,7 @@ public class WfcConfig
     [JsonPropertyName("CharsRule")]
     public List<WfcAlgorithm.Tile> CharsRule = null!;
     
-    public (int, int) GridSize = (30, 100);
+    public (int, int) GridSize = (25, 50);
     
     [JsonPropertyName("ShowSteps")]
     public bool ShowSteps = false;
